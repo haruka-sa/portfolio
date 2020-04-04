@@ -1,6 +1,6 @@
 # portfolio
 
-## portfolio
+## portfolio url
 https://myfirstfirebase-34643.web.app/
 
 ## Project setup
