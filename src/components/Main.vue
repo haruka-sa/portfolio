@@ -36,12 +36,14 @@
   text-align: center;
   padding: 20px 0 0 0;
   color: #fff;
-  font-size: 18px;
+  font-size: 18pt;
   font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #lign {
-  width: 135px;
+  width: 150px;
   margin: 0 auto;
   font-size: 18px;
   font-weight: bold;
@@ -52,9 +54,10 @@
   padding: 0 0 20px 0;
   width: 180px;
   color: #fff;
-  font-size: 18px;
+  font-size: 18pt;
   font-weight: bold;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #profile {
@@ -67,4 +70,6 @@
   height: 64px;
   border-radius: 50%;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 </style>
