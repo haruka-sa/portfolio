@@ -1,7 +1,19 @@
 <template>
   <div id="headerSection">
-    <button @click="toggle" class="btn btn-success"><img id="headerButton" src="../assets/header.png"></button>
-    <Drawer @close="toggle" align="left" :closeable="true">
+    <button
+      class="btn btn-success"
+      @click="toggle"
+    >
+      <img
+        id="headerButton"
+        src="../assets/header.png"
+      >
+    </button>
+    <Drawer
+      align="left"
+      :closeable="true"
+      @close="toggle"
+    >
       <div v-if="open">
         <Menu />
       </div>
@@ -13,7 +25,7 @@
 import Drawer from "vue-simple-drawer";
  
 export default {
-  name: "headerSection",
+  name: "HeaderSection",
   components: {
     Drawer
   },
@@ -32,13 +44,14 @@ export default {
 
 <style>
 #headerSection {
-  background: #F3F3F3;
+  background: #f3f3f3;
   width: 100%;
   height: auto;
 }
+
 #headerButton {
-    width: 50px;
-    height: 50px;
-    border-style: none;
+  width: 50px;
+  height: 50px;
+  border-style: none;
 }
 </style>
