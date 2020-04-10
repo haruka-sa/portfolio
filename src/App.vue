@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-   <Header />
-   <Main />
+    <Header />
+    <Main />
   </div>
-
 </template>
 
 <script>
@@ -19,5 +18,8 @@ export default {
 </script>
 
 <style>
+#app {
+  background-color: #fff;
+}
 
 </style>
