@@ -1,11 +1,12 @@
 <template>
   <div id="headerSection">
     <button
-      class="btn btn-success"
+      class="headerButton"
       @click="toggle"
     >
       <img
-        id="headerButton"
+        width="30"
+        height="30"
         src="../assets/header.png"
       >
     </button>
@@ -23,7 +24,7 @@
 
 <script>
 import Drawer from "vue-simple-drawer";
- 
+
 export default {
   name: "HeaderSection",
   components: {
@@ -42,16 +43,16 @@ export default {
 };
 </script>
 
-<style>
-#headerSection {
-  background: #f3f3f3;
-  width: 100%;
-  height: auto;
-}
+<style lang="scss" scoped>
+  #headerSection {
+    background: #f3f3f3;
+    width: 100%;
+    height: auto;
+  }
 
-#headerButton {
-  width: 50px;
-  height: 50px;
-  border-style: none;
-}
+  .headerButton {
+    border-style: none;
+    box-shadow: none;
+    background: #f3f3f3;
+  }
 </style>
