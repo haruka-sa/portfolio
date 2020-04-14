@@ -10,18 +10,78 @@
       </p>
     </div>
     <div id="gitHubLabel">
-      <p>sample</p>
+      <label for="gitHubLink">GitHub:</label>
+      <a
+        id="gitHubLink"
+        href="https://github.com/haruka-sa/portfolio"
+      >
+        https://github.com/haruka-sa/portfolio
+      </a>
     </div>
-    <a
-      id="gitHubLink"
-      href="https://github.com/haruka-sa/portfolio"
-    >
-      <p>GitHub : https://github.com/haruka-sa/portfolio</p>
-    </a>
+    <div id="skillCategories">
+      <ul>
+        <li>
+          <span
+            id="front"
+            @click="F_change"
+          >
+            Front-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="back"
+            @click="B_change"
+          >
+            Back-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="DevOps"
+            @click="D_change"
+          >
+            DevOps
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div id="skillList">
+      <ul id="front-end">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>SCSS</li>
+        <li>Vue</li>
+      </ul>
+      <ul id="back-end">
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>RubyOnRails</li>
+        <li>MySQL</li>
+      </ul>
+      <ul id="devops">
+        <li>Linux</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Firebase</li>
+      </ul>
+    </div>
+    <div id="skillGraph">
+      <FrontChart />
+    </div>
   </div>
 </template>
 
 <script>
+import FrontChart from './FrontChart.vue';
+
+export default {
+  name: 'SkillSection' ,
+  components: {
+    FrontChart
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -49,12 +109,13 @@
     word-wrap: break-word;
     line-height: 1.25em;
     padding: 20px;
-    width: 200px;
+    width: 350px;
     margin: 0 auto;
   }
 
   #gitHubLabel {
     text-align: center;
+    color: #20879f;
   }
 
   #gitHubLink {
@@ -63,8 +124,67 @@
     text-align: center;
   }
 
+  #skillCategories {
+    padding: 20px 0;
+    text-align: center;
+
+    #front {
+      color: #b51a1a;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #back {
+      color: #0f8839;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #DevOps {
+      color: #571083;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+
   #skillList {
-    height: 30px;
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+
+    #front-end li {
+      color: rgba(181, 26, 26, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
+    }
+
+    #back-end li {
+      color: rgba(15, 136, 57, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
+    }
+
+    #devops li {
+      color: rgba(87, 16, 131, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
+    }
+  }
+
+  #skillGraph {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');

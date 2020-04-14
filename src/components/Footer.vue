@@ -53,5 +53,12 @@ export default {
     padding: 20px 0;
   }
 
+  #gotoTop {
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    bottom: 25px;
+  }
+
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 </style>
