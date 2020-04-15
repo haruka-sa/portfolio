@@ -135,7 +135,7 @@ export default {
 <style lang="scss" scoped>
   #skilltSection {
     background: #fff;
-    width: 100vw;
+    width: 100%;
     height: auto;
     text-align: center;
   }
