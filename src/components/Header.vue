@@ -27,7 +27,6 @@
 <style lang="scss" scoped>
 #headerSection {
   background: #f3f3f3;
-  width: 100%;
   height: auto;
   padding: 10px;
 }

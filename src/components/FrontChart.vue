@@ -7,7 +7,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'javaScript', 'Ruby', 'Sass'],
+        labels: ['HTML', 'CSS', 'javaScript', 'SCSS', 'Vue'],
         datasets: [
           {
             data: [1, 2, 3, 4, 5],
