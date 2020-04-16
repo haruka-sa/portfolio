@@ -15,14 +15,18 @@
           href="#main"
           class="drawerMenuItemLink"
           @click="clickSmoothScroll('#mainSection')"
-        >Home</a>
+        >
+          Home
+        </a>
       </li>
       <li class="drawerMenuItem">
         <a
           href="#about"
           class="drawerMenuItemLink"
           @click="clickSmoothScroll('#aboutSection')"
-        >About me</a>
+        >
+          About me
+        </a>
       </li>
       <li class="drawerMenuItem">
         <a
@@ -45,13 +49,14 @@
 <script>
 export default {
   methods: {
-      clickSmoothScroll (Section) {
+      clickSmoothScroll (section) {
         event.preventDefault()
         this.$SmoothScroll(
-          document.querySelector(Section),
+          document.querySelector(section),
           400,
           'y'
-        )
+        );
+        this.$emit('close')
       }
     }
   }
@@ -74,6 +79,7 @@ export default {
     height: 30px;
     margin: 10px;
     float: right;
+    cursor: pointer;
   }
 
   .drawerMenuItem {

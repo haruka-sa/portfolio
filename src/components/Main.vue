@@ -31,6 +31,9 @@
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
     height: auto;
+    // margin-top: 50px;
+    min-height: 200px;
+    border-bottom: solid 1px #cbcbcb;
   }
 
   #userName {

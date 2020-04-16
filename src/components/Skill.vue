@@ -5,8 +5,12 @@
     </h1>
     <div id="skillExplain">
       <p>
-        ああああああああああああああああああ
-        ああああああああああああああああああ
+        五段階評価にて、スキルをまとめました。
+        Frontーendは、ポートフォリオ実装において知識や技術が身に付いたと感じています。
+        5つの内、JavaScriptが最も苦手なので、克服していきたいです。
+        Back-endはまだほとんど触ったことがありませんが、今後の研修で触る予定です。
+        DevOpsは、GitとGitHubの知識・技術は身に付いたと感じています。
+        LinuxとFirebaseにおいては、まだ理解できていない部分が多いので、勉強し、理解を深めていきます。
       </p>
     </div>
     <div id="gitHubLabel">
@@ -17,6 +21,11 @@
       >
         https://github.com/haruka-sa/portfolio
       </a>
+    </div>
+    <div id="push">
+      <div class="balloon">
+        PUSH!
+      </div>
     </div>
     <div id="skillCategories">
       <ul>
@@ -46,6 +55,9 @@
         </li>
       </ul>
     </div>
+
+
+
     <div id="skillList">
       <ul
         id="front-end"
@@ -110,7 +122,7 @@ export default {
   },
   data(){
     return {
-    currentChart: 'front'
+      currentChart: 'front'
     }
   },
   computed: {
@@ -145,9 +157,9 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 18pt;
-    padding: 5px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
+    padding: 20px 0 10px 0;
   }
 
   #skillExplain {
@@ -156,8 +168,8 @@ export default {
     font-size: 12pt;
     word-wrap: break-word;
     line-height: 1.25em;
-    padding: 20px;
-    width: 350px;
+    padding: 20px 0 30px 0;
+    width: 500px;
     margin: 0 auto;
   }
 
@@ -172,8 +184,43 @@ export default {
     text-align: center;
   }
 
+  #push {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .balloon {
+    position: relative;
+    display: inline-block;
+    padding: 0 2px;
+    margin: 15px 0 0 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background: #ffcc75;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  .balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-left: 20px solid #ffcc75;
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
   #skillCategories {
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     text-align: center;
 
     li {
@@ -201,7 +248,7 @@ export default {
   }
 
   #skillList {
-    font-size: 18px;
+    font-size: 13px;
     width: auto;
     text-align: center;
 
@@ -224,33 +271,37 @@ export default {
 
     #front-end li {
       color: rgba(181, 26, 26, 0.75);
-      height: 30px;
+      height: 20px;
       font-weight: bold;
       padding: 12px 20px 2px 20px;
       box-shadow: 0 0 8px gray;
+      border-radius: 10px;
     }
 
     #back-end li {
       color: rgba(15, 136, 57, 0.75);
-      height: 30px;
+      height: 20px;
       font-weight: bold;
       padding: 12px 20px 2px 20px;
       box-shadow: 0 0 8px gray;
+      border-radius: 10px;
     }
 
     #devops li {
       color: rgba(87, 16, 131, 0.75);
-      height: 30px;
+      height: 20px;
       font-weight: bold;
       padding: 12px 20px 2px 20px;
       box-shadow: 0 0 8px gray;
+      border-radius: 10px;
     }
   }
 
   #skillGraph {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
+    padding: 20px 0 30px 0;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');

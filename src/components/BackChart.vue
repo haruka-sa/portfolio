@@ -10,16 +10,19 @@ export default {
         labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
         datasets: [
           {
-            data: [1, 2, 3, 4],
+            label: 'Back-end',
+            data: [3, 3, 2, 4],
             backgroundColor: [
               'rgba(15, 136, 57, 0.2)',
+              'rgba(15, 136, 57, 0.2)',
+              'rgba(15, 136, 57, 0.2)',
+              'rgba(15, 136, 57, 0.2)'
             ],
             borderColor: [
+              'rgba(15, 136, 57, 0.7)',
+              'rgba(15, 136, 57, 0.7)',
+              'rgba(15, 136, 57, 0.7)',
               'rgba(15, 136, 57, 0.7)'
-              // 'rgba(255, 99, 132, 1)',
-              // 'rgba(54, 162, 235, 1)',
-              // 'rgba(255, 206, 86, 1)',
-              // 'rgba(75, 192, 192, 1)'
             ],
             borderWidth: 1
           },

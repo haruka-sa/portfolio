@@ -11,11 +11,19 @@ export default {
         datasets: [
           {
             label: 'Front-end',
-            data: [1, 2, 3, 4, 5],
+            data: [4, 3, 2, 3, 3],
             backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
               'rgba(255, 99, 132, 0.2)',
             ],
             borderColor: [
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(255, 99, 132, 0.7)',
               'rgba(255, 99, 132, 0.7)'
             ],
             borderWidth: 1
@@ -27,7 +35,7 @@ export default {
           scalelabel:{
             fontFamily:'Noto Sans JP',
             fontSize:30,
-            },
+          },
           ticks:{
             suggestedMax: 5,
               suggestedMin: 0,

@@ -8,14 +8,17 @@
     <label
       id="nav-open"
       for="nav-input"
-    ><span /></label>
+    ><span @click="openMenu" /></label>
     <label
       id="nav-close"
       class="nav-unshown"
       for="nav-input"
     />
-    <div id="nav-content">
-      <Menu />
+    <div
+      id="nav-content"
+      :class="{'nav-unshown' : isActive}"
+    >
+      <Menu @close="closedMenu" />
     </div>
   </div>
 </template>
@@ -27,15 +30,29 @@
     name: "Header",
     components: {
       Menu
+    },
+    data() {
+      return{
+        isActive: false
+       }
+    },
+    methods: {
+      closedMenu() {
+        this.isActive= true
+      },
+    openMenu() {
+      this.isActive= false
+      }
     }
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 #headerSection {
+  /* position: fixed; */
   background: #f3f3f3;
-  height: auto;
   padding: 10px;
+  height: auto;
 }
 
 #nav-drawer {
@@ -86,7 +103,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+
+  /* background: black; */
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
