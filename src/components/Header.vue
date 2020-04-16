@@ -15,19 +15,25 @@
       for="nav-input"
     />
     <div id="nav-content">
-      menu
+      <Menu />
     </div>
   </div>
 </template>
 
 <script>
+  import Menu from './Menu.vue';
 
+  export default {
+    name: "Header",
+    components: {
+      Menu
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
 #headerSection {
   background: #f3f3f3;
-  width: 100%;
   height: auto;
   padding: 10px;
 }
