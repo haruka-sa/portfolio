@@ -5,6 +5,7 @@
     <About />
     <Skill />
     <Vision />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
@@ -21,14 +23,16 @@ export default {
     Main,
     About,
     Skill,
-    Vision
+    Vision,
+    Footer
   }
 }
 </script>
 
-<style>
-#app {
-  background-color: #fff;
-}
-
+<style lang="scss" scoped>
+  #app {
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+  }
 </style>
