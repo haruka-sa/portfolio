@@ -8,7 +8,16 @@
     <label
       id="nav-open"
       for="nav-input"
-    ><span @click="openMenu" /></label>
+    >
+      <img
+        id="headerButton"
+        src="../assets/header.png"
+        width="25px"
+        height="25px"
+        @click="openMenu"
+      >
+
+    </label>
     <label
       id="nav-close"
       class="nav-unshown"
@@ -72,17 +81,11 @@
   vertical-align: middle;
 }
 
-/* ハンバーガーアイコンをCSSだけで表現 */
-#nav-open span,
-#nav-open span::before,
-#nav-open span::after {
-  position: absolute;
-  height: 3px;/* 線の太さ */
-  width: 25px;/* 長さ */
-  border-radius: 3px;
-  background: #555;
-  display: block;
-  content: '';
+#clickButton {
+  height: 20px;
+}
+
+#headerButton {
   cursor: pointer;
 }
 

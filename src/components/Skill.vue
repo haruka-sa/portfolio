@@ -6,7 +6,7 @@
     <div id="skillExplain">
       <p>
         五段階評価にて、スキルをまとめました。
-        Frontーendは、ポートフォリオ実装において知識や技術が身に付いたと感じています。
+        Front-endは、ポートフォリオ実装において知識や技術が身に付いたと感じています。
         5つの内、JavaScriptが最も苦手なので、克服していきたいです。
         Back-endはまだほとんど触ったことがありませんが、今後の研修で触る予定です。
         DevOpsは、GitとGitHubの知識・技術は身に付いたと感じています。
@@ -169,7 +169,7 @@ export default {
     word-wrap: break-word;
     line-height: 1.25em;
     padding: 20px 0 30px 0;
-    width: 500px;
+    width: 80%;
     margin: 0 auto;
   }
 
