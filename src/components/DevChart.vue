@@ -10,12 +10,18 @@ export default {
         labels: ['Linux', 'Git', 'GitHub', 'Firebase'],
         datasets: [
           {
-            label: 'Dev-Chart',
-            data: [1, 2, 3, 4],
+            label: 'Dev-Ops',
+            data: [2, 4, 4, 2],
             backgroundColor: [
               'rgba(87, 16, 131, 0.2)',
+              'rgba(87, 16, 131, 0.2)',
+              'rgba(87, 16, 131, 0.2)',
+              'rgba(87, 16, 131, 0.2)'
             ],
             borderColor: [
+              'rgba(87, 16, 131, 0.7)',
+              'rgba(87, 16, 131, 0.7)',
+              'rgba(87, 16, 131, 0.7)',
               'rgba(87, 16, 131, 0.7)'
             ],
             borderWidth: 1
