@@ -10,7 +10,7 @@
     </label>
 
     <ul class="drawerMenuSection">
-      <li class="drawerMenuItem">
+      <li class="homeButton">
         <a
           href="#main"
           class="drawerMenuItemLink"
@@ -71,12 +71,13 @@ export default {
   }
 
   #drawerButton {
-    height: 50px;
+    height: auto;
+    background: #f3f3f3;
   }
 
   #close {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin: 10px;
     float: right;
     cursor: pointer;
@@ -87,8 +88,20 @@ export default {
     width: 100%;
     height: auto;
     list-style: none;
-    padding: 20px 10px;
-    padding-bottom: 10px;
+    padding: 20px 10px 20px 10px;
+
+    /* padding-bottom: 10px; */
+    border: 1px solid  #f3f3f3;
+  }
+
+  .homeButton {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding: 40px 10px 20px 10px;
+
+    /* padding-bottom: 10px; */
     border: 1px solid  #f3f3f3;
   }
 
