@@ -2,12 +2,12 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'FrontChart',
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'javaScript', 'SCSS', 'Vue'],
+        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
         datasets: [
           {
             label: 'Front-end',
