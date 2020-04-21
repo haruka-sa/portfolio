@@ -25,6 +25,29 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  data() {
+    return {
+      skills: []
+    }
+  },
+  mounted () {
+    this.getSkills();
+  },
+  methods: {
+    getSkills() {
+      this.skills = [];
+      let items = this.skills;
+      this.axios.get('https://us-central1-myfirstfirebase-34643.cloudfunctions.net/skills')
+        .then((response) => {
+          response.data.forEach(function(skill) {
+            items.push(skill);
+          })
+        })
+        .catch((e) => {
+          alert(e);
+        });
+    }
   }
 }
 </script>
