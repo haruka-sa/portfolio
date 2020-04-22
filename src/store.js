@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     skillCategories: [],
+    loaded: false
   },
 
   getters: {
@@ -19,19 +20,28 @@ export default new Vuex.Store({
   },
 
   mutations: {
+  //   setSkillCategories : function(state,skillsArray) {
+  //     skillsArray[0].skill.forEach((skillInfo) => {
+  //       state.skillCategories.push(skillInfo.name)
+  //     })
+  //     state.loaded = true
+  //   }
+  // },
     setSkillCategories(state,payload) {
       state.skillCategories = payload.skillCategories;
-    },
+      state.loaded = true
+    }
+
   },
 
   actions: {
     async updateSkillCategories({commit}) {
       const skillCategories = [];
       const res = await axios.get('https://us-central1-myfirstfirebase-34643.cloudfunctions.net/skillCategories')
-      res.date.forEach((category) => {
+      res.data.forEach((category) => {
         skillCategories.push(category);
       });
       commit('setSkillCategories', {skillCategories});
     },
   },
-});
+})
