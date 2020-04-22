@@ -26,9 +26,11 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  mounted () {
+    this.$store.dispatch('updateSkillCategories');
   }
 }
-
 </script>
 
 <style lang="scss" scoped>

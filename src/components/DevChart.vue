@@ -7,7 +7,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Linux', 'Git', 'GitHub', 'Firebase'],
+        labels: [],
         datasets: [
           {
             label: 'Dev-Ops',
@@ -44,7 +44,16 @@ export default {
     }
   },
   mounted () {
+    this.getSkills ()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills () {
+      const skillCategory = this.$store.getters.getSkills('devops')
+      skillCategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
+    }
   }
 }
 </script>
