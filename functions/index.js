@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.set('Access-Control-Allow-Origin', '*');
   res.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS, POST');
   let skills = []
-  const query = admin.database().ref("skills").orderByKey();
+  const query = admin.database().ref("skillCategories").orderByKey();
   query.once("value").then(snapshot => {
     snapshot.forEach(childSnapshot => {
       let skill = childSnapshot.val();
@@ -32,4 +32,4 @@ app.get('/', (req, res) => {
     });
 });
 
-exports.skills = functions.region('us-central1').https.onRequest(app);
+exports.skillCategories = functions.region('us-central1').https.onRequest(app);
