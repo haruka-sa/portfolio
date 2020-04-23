@@ -16,6 +16,7 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
+
 export default {
   name: 'App',
   components: {
@@ -25,6 +26,9 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  mounted () {
+    this.$store.dispatch('updateSkillCategories');
   }
 }
 </script>

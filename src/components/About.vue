@@ -39,7 +39,7 @@
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  width: 500px;
+  width: 80%;
   margin: 0 auto;
   padding: 10px 0 30px 0;
   word-wrap: break-word;

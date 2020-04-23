@@ -2,12 +2,12 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'BackChart',
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
+        labels: [],
         datasets: [
           {
             label: 'Back-end',
@@ -44,7 +44,16 @@ export default {
     }
   },
   mounted () {
+    this.getSkills ()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills () {
+      const skillCategory = this.$store.getters.getSkills('Back-end')
+      skillCategory.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+      })
+    }
   }
 }
 </script>

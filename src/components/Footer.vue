@@ -58,6 +58,7 @@ export default {
     border-radius: 50%;
     position: relative;
     bottom: 25px;
+    opacity: 0.8;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
