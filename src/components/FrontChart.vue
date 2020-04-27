@@ -10,6 +10,7 @@ export default {
         labels: [],
         datasets: [
           {
+            label: 'Front-end',
             data: [4, 3, 2, 3, 3],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
